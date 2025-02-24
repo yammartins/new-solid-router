@@ -24,10 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
+    }
   },
   "files": ["src/main.tsx"],
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
