@@ -1,0 +1,29 @@
+{
+  "name": "solid-tsrouter",
+  "version": "0.0.0",
+  "author": {
+    "name": "Yam P. Martins",
+    "email": "ymprado2010@gmail.com",
+    "url": "https://github.com/yammartins"
+  },
+  "module": "main.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build && tsc --noEmit",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.111.3",
+    "@types/bun": "latest",
+    "vite": "^6.1.1",
+    "vite-plugin-solid": "^2.11.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@tanstack/solid-router": "^1.111.3"
+  }
+}
