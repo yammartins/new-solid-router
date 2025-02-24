@@ -40,6 +40,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@solidjs/meta": "^0.29.4",
     "@tanstack/solid-router": "^1.111.3"
   }
 }
