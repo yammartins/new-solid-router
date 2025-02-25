@@ -27,6 +27,7 @@
     "@commitlint/config-conventional": "19.6.0",
     "@tanstack/router-plugin": "^1.111.3",
     "@types/bun": "latest",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.13.5",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -41,6 +42,11 @@
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
-    "@tanstack/solid-router": "^1.111.3"
+    "@tailwindcss/postcss": "^4.0.8",
+    "@tailwindcss/vite": "^4.0.8",
+    "@tanstack/solid-router": "^1.111.3",
+    "js-cookie": "^3.0.5",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
   }
 }
