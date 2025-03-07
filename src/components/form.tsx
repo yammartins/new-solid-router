@@ -1,12 +1,5 @@
 import { cn } from "@/lib/utils"
-import type {
-  FieldPath,
-  FieldPathValue,
-  FieldStore,
-  FieldValue,
-  FieldValues,
-  Maybe,
-} from "@modular-forms/solid"
+import type { FieldPath, FieldPathValue, FieldValues, Maybe } from "@modular-forms/solid"
 import { type ComponentProps, Show, createContext, useContext } from "solid-js"
 
 type FormWrapperContextValue<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = {
@@ -18,17 +11,22 @@ type FormWrapperContextValue<TFieldValues extends FieldValues, TFieldName extend
   dirty: boolean
 }
 
-interface FormControlProps
-  extends ComponentProps<"div">,
-    Omit<FieldStore<FieldValues, FieldPath<FieldValues>>, "value"> {
-  value: Maybe<FieldValues | FieldValue | (FieldValues | FieldValue)[]>
+type FormControlProps<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>> = {
+  name: TFieldName
+  value: Maybe<FieldPathValue<FieldValues, TFieldName>>
+  error: string
+  active: boolean
+  touched: boolean
+  dirty: boolean
 }
 
 const FormWrapperContext = createContext<FormWrapperContextValue<FieldValues, FieldPath<FieldValues>>>(
   {} as FormWrapperContextValue<FieldValues, FieldPath<FieldValues>>
 )
 
-export function FormWrapper(props: FormControlProps) {
+export function FormWrapper<TFieldValues extends FieldValues, TFieldName extends FieldPath<TFieldValues>>(
+  props: FormControlProps<TFieldValues, TFieldName>
+) {
   return (
     <FormWrapperContext.Provider value={props}>
       <div
