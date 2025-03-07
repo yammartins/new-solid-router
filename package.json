@@ -29,10 +29,12 @@
     "@types/bun": "latest",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.13.5",
+    "clsx": "2.1.1",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "knip": "^5.44.5",
     "lefthook": "^1.11.0",
+    "tailwind-merge": "3.0.2",
     "typescript": "^5.7.3",
     "vite": "^6.1.1",
     "vite-plugin-solid": "^2.11.2"
@@ -41,12 +43,14 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@modular-forms/solid": "^0.25.1",
     "@solidjs/meta": "^0.29.4",
     "@tailwindcss/postcss": "^4.0.8",
     "@tailwindcss/vite": "^4.0.8",
     "@tanstack/solid-router": "^1.111.3",
     "js-cookie": "^3.0.5",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.8"
+    "tailwindcss": "^4.0.8",
+    "zod": "^3.24.2"
   }
 }

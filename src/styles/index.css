@@ -17,4 +17,8 @@
   --color-error-500: oklch(63.9% 0.2285 26.63);
 
   --font-open-sans: "Open Sans", sans-serif;
+
+  --tw-translate-x: 16px 16px;
+  --tw-translate-y: 12px 12px;
+  --form-initial-translate: var(--tw-translate-x) var(--tw-translate-y);
 }

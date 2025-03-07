@@ -21,19 +21,22 @@ declare module "@tanstack/solid-router" {
   }
 }
 
+function App() {
+  const authToken = Cookies.get("hzc-token")
+
+  return (
+    <MetaProvider>
+      <title>%s | HZC Solid!</title>
+      <meta
+        name="description"
+        content="The merge between Tanstack Router and Solid.js for HZC study project."
+      />
+      <RouterProvider router={router} context={{ authToken }} />
+    </MetaProvider>
+  )
+}
+
 const rootElement = document.getElementById("root")
 if (rootElement && !rootElement.innerHTML) {
-  render(
-    () => (
-      <MetaProvider>
-        <title>%s | HZC Solid!</title>
-        <meta
-          name="description"
-          content="The merge between Tanstack Router and Solid.js for HZC study project."
-        />
-        <RouterProvider router={router} />
-      </MetaProvider>
-    ),
-    rootElement
-  )
+  render(() => <App />, rootElement)
 }
