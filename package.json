@@ -1,46 +1,49 @@
 {
-  "name": "solid-tsrouter",
-  "version": "0.0.0",
-  "author": {
-    "name": "Yam P. Martins",
-    "email": "ymprado2010@gmail.com",
-    "url": "https://github.com/yammartins"
-  },
-  "module": "main.ts",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite --port 3000",
-    "build": "vite build && tsc --noEmit",
-    "serve": "vite preview",
-    "start": "vite",
-    "check": "biome check .",
-    "check:fix": "biome check --fix .",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "serve": "turbo run serve",
+    "start": "turbo run start",
+    "check": "turbo run check",
+    "check:fix": "turbo run check:fix",
     "check:unused": "knip --max-issues 1",
     "check:unused:fix": "knip --fix",
     "commit": "cz",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "turbo run typecheck",
     "knip": "knip"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@tanstack/router-plugin": "^1.111.3",
-    "@types/bun": "latest",
-    "@types/node": "^22.13.5",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "knip": "^5.44.5",
     "lefthook": "^1.11.0",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.1",
-    "vite-plugin-solid": "^2.11.2"
-  },
-  "peerDependencies": {
+    "turbo": "2.4.4",
     "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "@solidjs/meta": "^0.29.4",
-    "@tanstack/solid-router": "^1.111.3"
+  "packageManager": "pnpm@10.6.1",
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@biomejs/biome",
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "lefthook",
+      "prisma"
+    ],
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "lefthook",
+      "prisma"
+    ]
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

@@ -1,10 +1,15 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "project": ["**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"],
-  "entry": ["src/main.tsx", "scripts/{build,create}.js"],
-  "ignore": ["./routeTree.gen.ts"],
-  "ignoreDependencies": ["tailwindcss", "@tailwindcss/vite"],
+  "entry": [],
   "lefthook": {
     "config": ["lefthook.yml"]
+  },
+  "workspaces": {
+    "client": {
+      "entry": ["src/main.tsx", "scripts/{build,create}.js"],
+      "ignore": ["./routeTree.gen.ts"],
+      "ignoreDependencies": ["tailwindcss", "@tailwindcss/vite"]
+    }
   }
 }

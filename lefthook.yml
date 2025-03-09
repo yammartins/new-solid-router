@@ -2,13 +2,13 @@ pre-commit:
   parallel: true
   commands:
     typecheck:
-      run: bun run typecheck  
+      run: pnpm run typecheck  
     check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: bun run check {staged_files}
+      run: npx biome check --fix --unsafe {staged_files}
       stage_fixed: true
     # unused-code:
-    #   run: bun run check:unused
+    #   run: pnpm run check:unused
 
 commit-msg:
   parallel: true
@@ -32,5 +32,5 @@ post-merge:
       env:
         LEFTHOOK_QUIET: execution_info,meta,skips,summary
     client-dependencies:
-      glob: "{bun.lockb,package.json}"
-      run: bun install      
+      glob: "{pnpm-lock.yaml,package.json}"
+      run: pnpm install      

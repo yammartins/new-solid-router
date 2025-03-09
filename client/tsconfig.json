@@ -1,0 +1,12 @@
+{
+  "extends": "@solid-tsrouter/typescript-config/solid.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "files": ["src/main.tsx"],
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"]
+}
