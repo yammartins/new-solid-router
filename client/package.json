@@ -1,0 +1,49 @@
+{
+  "name": "solid-tsrouter",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Yam P. Martins",
+    "email": "ymprado2010@gmail.com",
+    "url": "https://github.com/yammartins"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build && tsc --noEmit",
+    "serve": "vite preview",
+    "start": "vite",
+    "check": "biome check .",
+    "check:fix": "biome check --fix --unsafe .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@solid-tsrouter/typescript-config": "workspace:*",
+    "@tanstack/router-plugin": "^1.111.3",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^22.13.5",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.0.2",
+    "turbo": "2.4.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1",
+    "vite-plugin-solid": "^2.11.2"
+  },
+  "dependencies": {
+    "@modular-forms/solid": "^0.25.1",
+    "@prisma/client": "^6.4.1",
+    "@prisma/extension-accelerate": "^1.2.2",
+    "@solidjs/meta": "^0.29.4",
+    "@tailwindcss/postcss": "^4.0.8",
+    "@tailwindcss/vite": "^4.0.8",
+    "@tanstack/solid-router": "^1.111.3",
+    "better-auth": "^1.2.3",
+    "js-cookie": "^3.0.5",
+    "postcss": "^8.5.3",
+    "prisma": "^6.4.1",
+    "solid-js": "^1.9.5",
+    "tailwindcss": "^4.0.8",
+    "zod": "^3.24.2"
+  }
+}
